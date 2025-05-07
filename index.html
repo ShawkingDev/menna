@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Girl 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<style>
+  #loveMap {
+    height: 500px;
+    width: 100%;
+  }
+</style>
+</head>
+<script>
+  const password = prompt("Enter the secret code ❤️:");
+  if (password !== "I HATE YOU") {
+    document.body.innerHTML = "Access Denied 💔";
+  }
+</script>
+<body>
+  <canvas id="heartsCanvas"></canvas>
+
+  <div class="container">
+    <!-- Video Section -->
+    <section class="section fade-in" id="video-section">
+      <h1>Just Me Talking to You 💬</h1>
+      <video controls>
+        <source src="HAPPY BIRTHDAY.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="section fade-in" id="countdown-section">
+      <h2>Countdown to Her Special Day ❤️</h2>
+      <div id="countdown"></div>
+    </section>
+
+    <!-- Pictures Gallery -->
+    <section class="section fade-in" id="pictures-section">
+      <h2>Our Memories 📸</h2>
+      <div class="gallery">
+        <img src="wife.jpg" alt="Pic 1">
+        <img src="cute.jpg" alt="Pic 2">
+        <img src="hinata.jpg" alt="Pic 3">
+        <img src="31 DAY .jpg" alt="Pic 4">
+        <img src="31 oct.jpg" alt="Pic 5">
+        <img src="a day before we be together .jpg" alt="Pic 6">
+        <img src="after the exam.jpg" alt="Pic 7">
+        <img src="amazing.jpg" alt="Pic 8">
+        <img src="as she said after a long fight.jpg" alt="Pic 9">
+        <img src="BABY SHARK.jpg" alt="Pic 10">
+        <img src="before the exam .jpg" alt="Pic 11">
+        <img src="BEFORE WONDERFULL DAY .jpg" alt= "Pic 12">
+        <img src="BEST DAY FOR HER .jpg" alt="Pic 13">
+        <img src="BROKEN FLOWER WE BROKE IT HAHAHAHHA.jpg" alt="Pic 14">
+        <img src="changed me .jpg" alt="Pic 15">
+        <img src="chem.jpg" alt="Pic 16">
+        <img src="dinner date .jpg" alt="Pic 17">
+        <img src="DINNER date end .jpg" alt="Pic 18">
+        <img src="engineering.jpg" alt="Pic 19">
+        <img src="first flower for her and a gift for me .jpg" alt="Pic 20">
+        <img src="first hangout .jpg" alt="Pic 21">
+        <img src="FIRST HEART PIC .jpg" alt="Pic 22">
+        <img src="first mirror pic.jpg" alt="Pic 23">
+        <img src="first time holding her hand .jpg" alt="Pic 24">
+        <img src="gorgeous.jpg" alt="Pic 25">
+        <img src="got rejected .jpg" alt="Pic 26">
+        <img src="great couple.jpg" alt="Pic 27">
+        <img src="great day .jpg" alt="Pic 28">
+        <img src="great gf.jpg" alt="Pic 29">
+        <img src="great wife inshaallah .jpg" alt="Pic 30">
+        <img src="HUSBAND AND WIFE .jpg" alt="Pic 31">
+        <img src="i love her .jpg" alt="Pic 32">
+        <img src="last goodbye before i go to my parents .jpg" alt="Pic 33">
+        <img src="made her better.jpg" alt="Pic 34">
+        <img src="Made her happy and changed her mood .jpg" alt="Pic 35">
+        <img src="matching .jpg" alt="Pic 36">
+        <img src="me and her.jpg" alt="Pic 37">
+        <img src="STUDYING FOR THE EXAM .jpg" alt="Pic 38">
+        <img src="true love .jpg" alt="Pic 39">
+        <img src="was eating tissues hehehehehehe.jpg" alt="Pic 40">
+        <img src="WHAT A WONDERFUL DAY .jpg" alt="Pic 41">
+      
+      </div>
+    </section>
+    
+
+    <!-- Letters Section -->
+    <section class="section fade-in" id="letters-section">
+      <h2>Letters to You 💌</h2>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">The Day You Walked In</h3>
+        <p class="letter-content" style="display: none;">
+          My Love,<br><br>
+          The day you walked into my life, the world lit up like never before.
+          Your smile has become my sunshine, your voice my favorite sound, and your happiness my biggest mission.
+          Every moment with you feels like home, and every day away from you feels like a lifetime.
+          You’ve shown me what love is — real, raw, warm, and forever.<br><br>
+          I love you more than I could ever put into words,
+          and still, I’ll spend every day trying.
+        </p>
+      </div>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">Forever Starts With You</h3>
+        <p class="letter-content" style="display: none;">
+          To the most beautiful girl in the world,<br><br>
+          Every time I think about the future, you're in it — laughing, dreaming, holding my hand.
+          You're not just my today — you're my always.
+          The love I have for you grows deeper with every sunrise and stronger with every heartbeat.<br><br>
+          I can't wait to build a life with you — full of memories, inside jokes, late-night cuddles, and dreams that come true because we believed in each other.<br><br>
+          You’re my everything. My forever starts with you.
+        </p>
+      </div>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">My Best Days Are You</h3>
+        <p class="letter-content" style="display: none;">
+          Hey baby,<br><br>
+          The truth is, my best days are the ones with you in them.
+          You're the reason I smile for no reason, the calm in my chaos, and the fire in my heart.
+          Just hearing your voice can fix a bad day. Just thinking of you gives me strength.<br><br>
+          I want to be your reason to smile every day.
+          Because baby, you are mine. Always.
+        </p>
+      </div>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">You’re My Favorite Notification</h3>
+        <p class="letter-content" style="display: none;">
+          Hey Cutie,<br><br>
+          I think I’m addicted…<br>
+          Not to coffee, not to my phone — but to you.<br>
+          You're the best kind of distraction, the cutest glitch in my system, and my favorite notification.
+          When I hear your voice, my brain just goes: “Yup. That’s the one.”<br><br>
+          I don't need anime, I don't need pizza — okay maybe pizza —<br>
+          But I always need you.<br><br>
+          Stay weird, stay mine. 💕
+        </p>
+      </div>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">My Universe</h3>
+        <p class="letter-content" style="display: none;">
+          To the soul that completes mine,<br><br>
+          In a sky full of stars, you're the one that makes my universe make sense.
+          I could write a thousand poems and still not capture the way I feel when you look at me.
+          You are light in my darkness, peace in my storms, and rhythm to my heartbeat.<br><br>
+          If loving you is a story, then let it be infinite.
+          Because you… you're my favorite chapter in the book of life.
+        </p>
+      </div>
+    
+      <div class="letter">
+        <h3 onclick="toggleLetter(this)">You Deserve the World</h3>
+        <p class="letter-content" style="display: none;">
+          Happy Birthday, My Love 🎉<br><br>
+          Today isn't just your birthday — it's a celebration of the best person to ever exist.
+          You deserve laughter that never fades, love that never ends, and a future that’s brighter than the stars.
+          I’m so lucky to walk through life with you by my side.<br><br>
+          I hope this year brings you more smiles than you can count and more love than you can carry — and I promise to be part of both.<br><br>
+          I love you. Forever and even after. 💝
+        </p>
+      </div>
+    </section>
+    <section class="section fade-in" id="love-map-section">
+      <h2>Our Love Map 🌍</h2>
+      <div id="loveMap" style="height: 500px; border-radius: 15px; margin-top: 20px;"></div>
+    </section>
+    
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  window.onload = function () {
+    const map = L.map("loveMap").setView([30.033333, 31.233334], 5);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    const lovePoints = [
+      {
+        coords: [30.026558, 31.491453],
+        title: "Where We First Met ",
+        story: "I'll never forget the moment our eyes met. That place became the beginning of everything."
+      },
+      {
+        coords: [30.027547, 31.498265],
+        title: "Our First date the day we became couples ",
+        story: "I'll never forget the moment we had our first date it was a great day"
+      },
+      {
+        coords: [35.676539, 138.325889],
+        title: "Dream Destination ",
+        story: "One day, we'll walk these streets together. Hand in hand. Heart to heart."
+      },
+      {
+        coords: [30.081816, 31.363579],
+        title: "31 DEC 2024 ",
+        story: "WHAT A DAY this date was one of the greatest everything was just perfect i cant forget this day"
+      },
+    ];
+    
+    lovePoints.forEach(point => {
+      L.marker(point.coords).addTo(map)
+        .bindPopup(`<b>${point.title}</b><br>${point.story}`);
+    });
+  };
+ 
+   
+    
+</script>
+<h1>💌 Why I hate(love) You 💌</h1>
+<div class="notes-container" id="notes-container">
+  <!-- Example Notes -->
+  <div class="note">You're the best future wife</div>
+  <div class="note">You always believe in me</div>
+  <div class="note">You're my best friend</div>
+  <div class="note">You are the only one i want</div>
+  <div class="note">Your kindnees</div>
+  <div class="note">Your heart</div>
+  <div class="note">You're my princess, Queen </div>
+  <div class="note">You're everything no more than everything</div>
+</div>
+
+<div class="form">
+  <input type="text" id="noteInput" placeholder="Add another reason..." />
+  <button onclick="addNote()">➕ Add</button>
+</div>
+
+<h1>Our Love Timeline</h1>
+
+<div class="timeline">
+
+  <div class="container left">
+    <div class="date">SEP 25-27, 2024</div>
+    <div class="text"> We met for the first time. Sparks flew!</div>
+  </div>
+
+  <div class="container right">
+    <div class="date">OCT 31, 2024</div>
+    <div class="text"> Our first date – shawarma.</div>
+  </div>
+
+  <div class="container left">
+    <div class="date">Oct 16, 2024</div>
+    <div class="text"> Your surprise gift made my heart melt.</div>
+  </div>
+
+  <div class="container right">
+    <div class="date">OCT 31, 2024</div>
+    <div class="text"> First “I love you” – unforgettable words.</div>
+  </div>
+
+  <div class="container left">
+    <div class="date">DEC 31, 2024</div>
+    <div class="text"> last date WHAT A DATE.</div>
+  </div>
+
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
